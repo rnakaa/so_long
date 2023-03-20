@@ -6,7 +6,7 @@
 #    By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/19 20:27:02 by rnaka             #+#    #+#              #
-#    Updated: 2023/03/20 10:53:28 by rnaka            ###   ########.fr        #
+#    Updated: 2023/03/20 12:02:23 by rnaka            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ CFLAGS = -Wall -Wextra -Werror
 M_SRCS		= main.c
 
 C_SRCS		= check/check_file_name.c\
-		check/check_map.c
+			check/check_map.c\
+			check/const_map.c
 
 E_SRCS		= error/error.c
 
