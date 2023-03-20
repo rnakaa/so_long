@@ -6,11 +6,11 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 14:47:39 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/20 00:09:26 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/20 13:45:56 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
@@ -83,27 +83,4 @@ char	*get_next_line(int fd)
 	ft_strlib(&re_line);
 	re_line = p;
 	return (re_line);
-}
-
-int	main(int argc, const char *argv[])
-{
-	int		fd;
-	char	*a;
-
-	if (argc == 1)
-		fd = 0;
-	else
-		fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
-		return (1);
-	while (1)
-	{
-		a = get_next_line(fd);
-		printf("%s", a);
-		if (!a)
-			break ;
-		free(a);
-	}
-	free(a);
-	return (0);
 }
