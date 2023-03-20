@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 17:20:24 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/20 18:01:11 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/20 11:03:19 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,10 @@ int	main(int argc, const char *argv[])
 	int		fd;
 	char	*a;
 
-	if (argc == 1)
-		fd = 0;
-	else
-		fd = open(argv[1], O_RDONLY);
+	file_name(argc, argv);
+	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
-		return (1);
+		error(2);
 	ft_printf("nnnnn\n");
 	while (1)
 	{

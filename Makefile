@@ -6,32 +6,32 @@
 #    By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/19 20:27:02 by rnaka             #+#    #+#              #
-#    Updated: 2023/03/20 04:48:04 by rnaka            ###   ########.fr        #
+#    Updated: 2023/03/20 10:53:28 by rnaka            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= so_long
 
-CC			= gcc
+CC		= gcc
 
 INCLUDE		= -I include
 
 CFLAGS = -Wall -Wextra -Werror
 
-M_SRCS		= 	main.c
-			
-#C_SRCS		=check/check_file_name.c\
-			#check/check_map.c\
+M_SRCS		= main.c
 
-SRCS		= $(M_SRCS)
+C_SRCS		= check/check_file_name.c\
+		check/check_map.c
+
+E_SRCS		= error/error.c
+
+SRCS		= $(M_SRCS) $(C_SRCS) $(E_SRCS)
 
 OBJDIR		= objs
 
-LIBFTDIR		= libft
+LIBFTDIR	= libft
 
 OBJS		= $(SRCS:%.c=$(OBJDIR)/%.o)
-
-
 
 all:		$(NAME)
 

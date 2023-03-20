@@ -6,24 +6,24 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 14:47:39 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/20 13:45:56 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/20 10:59:50 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	count;
-
-	count = 0;
-	while (*str != '\0')
-	{
-		str++;
-		count++;
-	}
-	return (count);
-}
+//size_t	ft_strlen(const char *str)
+//{
+//	size_t	count;
+//
+//	count = 0;
+//	while (*str != '\0')
+//	{
+//		str++;
+//		count++;
+//	}
+//	return (count);
+//}
 
 static ssize_t	*ft_strlib(char **c)
 {

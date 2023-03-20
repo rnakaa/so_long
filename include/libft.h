@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:20:46 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/20 17:46:48 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/20 10:56:11 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include<stdlib.h>
 # include<stdio.h>
 # include<unistd.h>
+# include<stdint.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 25
