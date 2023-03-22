@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 07:09:52 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/22 07:21:16 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/22 16:44:33 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@
 void	error_free(char **map, int i)
 {
 	free_dp_char(map);
-	error(4);
+	error(i);
 }
