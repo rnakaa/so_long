@@ -6,7 +6,7 @@
 #    By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/19 20:27:02 by rnaka             #+#    #+#              #
-#    Updated: 2023/03/22 15:47:25 by rnaka            ###   ########.fr        #
+#    Updated: 2023/03/22 17:43:48 by rnaka            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ C_SRCS		= check/check_file_name.c\
 			check/const_map.c\
 			check/check_char.c\
 			check/check_wall.c\
-			check/check_cep.c
+			check/check_cep.c\
+			check/find_cep.c
 
 E_SRCS		= error/error.c\
 			error/error_free.c\

@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 17:31:17 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/22 15:48:01 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/22 18:38:48 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ void	check_wall(char **map);
 int		mapsize(char **map);
 int		maplen(char *map);
 void	check_cep(char **map);
+int		find_cep(int i, int j, char **map ,int *list);
 #endif
