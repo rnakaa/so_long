@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 17:31:17 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/22 16:49:51 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/22 14:20:14 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,7 @@ void	check_char(char **map);
 void	check_map(char **map);
 void	error_free(char **map, int i);
 void	free_dp_char(char **chardp);
+void	check_wall(char **map);
+int		mapsize(char **map);
+int		maplen(char *map);
 #endif
