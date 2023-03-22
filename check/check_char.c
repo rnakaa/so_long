@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_map.c                                        :+:      :+:    :+:   */
+/*   check_char.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 02:05:33 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/22 07:29:20 by rnaka            ###   ########.fr       */
+/*   Created: 2023/03/22 07:00:01 by rnaka             #+#    #+#             */
+/*   Updated: 2023/03/22 07:25:35 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 #include"so_long.h"
 
-static void	check_wall(char **map)
+static int	is_mapascii(char i)
 {
-	int	i;
-
-	while ()
+	if (i == '1' || i == '0' || i == 'C' || i == 'E' || i == 'P')
+		return (0);
+	return (1);
 }
 
-void	check_map(char **map)
+void	check_char(char **map)
 {
-	check_char(map);
-	check_wall(map);
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (map[i])
+	{
+		while (map[i][j] != '\n' || map[i][j])
+		{
+			if (is_mapascii(map[i][j]))
+				error_free(map, 4);
+			j++;
+		}
+		i++;
+	}
 }
 
