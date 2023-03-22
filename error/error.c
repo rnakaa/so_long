@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 19:25:28 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/22 14:50:23 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/22 15:44:55 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ void	error(int num)
 		ft_printf("error (form is invalid.)\n");
 	else if (num == 6)
 		ft_printf("error (wall is broken.)\n");
+	else if (num == 7)
+		ft_printf("error (number of CEP is invalid.)\n");
 	exit (1);
 }
