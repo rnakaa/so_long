@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 17:20:24 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/22 16:48:03 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/22 08:36:40 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ int	main(int argc, const char *argv[])
 {
 	int		fd;
 	char	**map;
-	int		i;
 
-	i = 0;
 	map = NULL;
 	file_name(argc, argv);
 	fd = open(argv[1], O_RDONLY);
@@ -27,12 +25,6 @@ int	main(int argc, const char *argv[])
 		error(2);
 	map = const_map(fd);
 	check_map(map);
-	while (map[i])
-	{
-		ft_printf("%s",map[i]);
-		free(map[i++]);
-	}
-	free(map[i]);
-	free(map);
+	free_dp_char(map);
 	return (0);
 }

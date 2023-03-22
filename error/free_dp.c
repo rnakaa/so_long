@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 07:17:49 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/22 16:44:58 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/22 08:46:09 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ void	free_dp_char(char **map)
 	if (!map)
 		return ;
 	while (map[i])
+	{
+		free(map[i]);
 		i++;
+	}
 	free(map[i]);
 	free(map);
 }

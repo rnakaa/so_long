@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 07:00:01 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/22 07:25:35 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/22 09:11:02 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ void	check_char(char **map)
 	j = 0;
 	while (map[i])
 	{
-		while (map[i][j] != '\n' || map[i][j])
+		j = 0;
+		while (map[i][j] != '\n' && map[i][j])
 		{
 			if (is_mapascii(map[i][j]))
 				error_free(map, 4);
@@ -38,4 +39,3 @@ void	check_char(char **map)
 		i++;
 	}
 }
-
