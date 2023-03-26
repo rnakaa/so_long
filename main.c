@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 17:20:24 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/23 08:59:15 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/26 19:25:00 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	main(int argc, const char *argv[])
 		error(2);
 	map = const_map(fd);
 	check_map(map);
-	find_cep(map);
 	free_dp_char(map);
 	return (0);
 }
