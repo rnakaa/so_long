@@ -6,7 +6,7 @@
 #    By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/19 20:27:02 by rnaka             #+#    #+#              #
-#    Updated: 2023/03/22 17:43:48 by rnaka            ###   ########.fr        #
+#    Updated: 2023/03/26 20:34:38 by rnaka            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ CC		= gcc
 INCLUDE		= -I include
 
 CFLAGS = -Wall -Wextra -Werror
+
+DEBUG = -g -fsanitize=address  -fsanitize=undefined
 
 M_SRCS		= main.c
 
@@ -50,6 +52,10 @@ $(OBJDIR)/%.o:%.c
 			@mkdir -p $(@D)
 			$(CC) -c $< -o $@ $(CFLAGS) $(INCLUDE)
 
+ifeq ($(shell uname), Linux)
+DEBUG += -fsanitize=leak
+endif
+
 clean:
 			@$(RM) -r $(OBJDIR)
 			@make fclean -C $(LIBFTDIR)
@@ -58,5 +64,8 @@ fclean:		clean
 			@$(RM) $(NAME)
 
 re:			fclean all
+
+debug:	CFLAGS += $(DEBUG)
+debug:	re
 
 .PHONY:		all clean fclean re

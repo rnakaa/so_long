@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 17:35:45 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/26 20:29:58 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/26 20:32:35 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void	find_cep(char **map, int size)
 {
 	int	i;
 	int	j;
-	int	l;
+	int	l[i];
 
 	i = 0;
 	j = 0;
