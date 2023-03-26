@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 17:35:45 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/26 20:32:35 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/26 20:38:18 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,13 +90,13 @@ int	enumera_c(char **map, int *list)
 
 void	find_cep(char **map, int size)
 {
-	int	i;
-	int	j;
-	int	l[i];
+	int	*list;
 
-	i = 0;
-	j = 0;
+	list = malloc(sizeof(int) * size);
 	reset_list(map, list);
 	if (!enumera_c(map, list))
+	{
+		free(list);
 		error_free(map, 8);
+	}
 }
