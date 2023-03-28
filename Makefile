@@ -6,7 +6,7 @@
 #    By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/19 20:27:02 by rnaka             #+#    #+#              #
-#    Updated: 2023/03/28 17:42:13 by rnaka            ###   ########.fr        #
+#    Updated: 2023/03/29 01:43:58 by rnaka            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,9 @@ E_SRCS		= error/error.c\
 			error/error_free.c\
 			error/free_dp.c
 
-D_SRCS		= draw/draw.c
+D_SRCS		= draw/draw.c\
+			draw/make_map.c\
+			draw/player_move.c
 
 SRCS		= $(M_SRCS) $(C_SRCS) $(E_SRCS) $(D_SRCS)
 

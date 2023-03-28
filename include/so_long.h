@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 17:31:17 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/28 23:45:34 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/29 01:47:01 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,8 @@ int		maplen(char *map);
 void	check_cep(char **map);
 void	find_cep(char **map, int size);
 void	draw(t_data *map);
+void	make_field(t_data *map);
+int		make_map(t_data *map);
+int		player_move(int key, t_data *map);
+int		end_game(t_data *map);
 #endif
