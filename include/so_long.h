@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 17:31:17 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/28 18:06:06 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/28 23:45:34 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,11 @@ typedef struct s_data
 	char	**map;
 	int	width;
 	int	height;
+	int	i;
+	int	j;
+	int	count;
+	int	total;
+	int	donum;
 	void	*mlx;
 	void	*mlx_win;
 	void	*grass;
