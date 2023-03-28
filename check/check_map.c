@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 02:05:33 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/26 20:23:39 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/29 01:53:48 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,3 @@ void	check_map(char **map)
 	size = maplen(map[0]) * mapsize(map);
 	find_cep(map, size);
 }
-

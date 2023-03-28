@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 17:36:26 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/22 15:54:21 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/29 01:53:20 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 int	check_extencion(const char *argv)
 {
 	char	*ber;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	ber = ".ber\0";

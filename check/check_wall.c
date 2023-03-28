@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 14:09:39 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/22 15:05:52 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/29 01:54:18 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,3 @@ void	check_wall(char **map)
 	if (u_and_d_one(map) || l_and_r_one(map))
 		error_free(map, 6);
 }
-
