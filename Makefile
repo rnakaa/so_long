@@ -6,7 +6,7 @@
 #    By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/19 20:27:02 by rnaka             #+#    #+#              #
-#    Updated: 2023/03/26 20:34:38 by rnaka            ###   ########.fr        #
+#    Updated: 2023/03/28 17:42:13 by rnaka            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC		= gcc
 
 INCLUDE		= -I include
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS =	-Wall -Wextra -Werror 
 
 DEBUG = -g -fsanitize=address  -fsanitize=undefined
 
@@ -34,7 +34,9 @@ E_SRCS		= error/error.c\
 			error/error_free.c\
 			error/free_dp.c
 
-SRCS		= $(M_SRCS) $(C_SRCS) $(E_SRCS)
+D_SRCS		= draw/draw.c
+
+SRCS		= $(M_SRCS) $(C_SRCS) $(E_SRCS) $(D_SRCS)
 
 OBJDIR		= objs
 
@@ -46,7 +48,7 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS)
 			@make -C $(LIBFTDIR)
-			$(CC) $(CFLAGS) $(OBJS) -L$(LIBFTDIR) -lft -o $(NAME)
+			$(CC) $(CFLAGS) $(OBJS) -L$(LIBFTDIR) -lft -o $(NAME) -L/usr/X11R6/lib -lX11 -lXext -framework OpenGL -framework AppKit minilibx_opengl_20191021/libmlx.a 
 
 $(OBJDIR)/%.o:%.c
 			@mkdir -p $(@D)

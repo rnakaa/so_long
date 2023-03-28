@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 17:31:17 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/26 20:24:32 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/03/28 18:06:06 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,21 @@
 
 #include <fcntl.h>
 #include <stdlib.h>
+#include "../minilibx_opengl_20191021/mlx.h"
+
+typedef struct s_data
+{
+	char	**map;
+	int	width;
+	int	height;
+	void	*mlx;
+	void	*mlx_win;
+	void	*grass;
+	void	*ball;
+	void	*cock;
+	void	*wall;
+	void	*exit;
+} t_data;
 
 void	file_name(int argc, const char **argv);
 void	error(int num);
@@ -28,4 +43,5 @@ int		mapsize(char **map);
 int		maplen(char *map);
 void	check_cep(char **map);
 void	find_cep(char **map, int size);
+void	draw(t_data *map);
 #endif
