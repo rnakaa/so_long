@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 15:35:10 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/29 01:52:00 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/05/03 18:43:06 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ static int	find_e(char **map)
 		return (1);
 	return (0);
 }
+
 static int	find_p(char **map)
 {
 	int	i;
@@ -59,6 +60,7 @@ static int	find_p(char **map)
 		return (1);
 	return (0);
 }
+
 static int	find_c(char **map)
 {
 	int	i;
@@ -88,4 +90,3 @@ void	check_cep(char **map)
 	if (find_c(map) || find_e(map) || find_p(map))
 		error_free(map, 7);
 }
-

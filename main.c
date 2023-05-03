@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 17:20:24 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/28 02:48:32 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/05/03 20:55:10 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,12 @@ int	main(int argc, const char *argv[])
 	draw(&mapdata);
 	free_dp_char(map);
 	return (0);
+}
+
+
+#include <libc.h>
+
+__attribute__((destructor))
+static void destructor() {
+    system("leaks -q so_long");
 }

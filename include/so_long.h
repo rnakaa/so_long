@@ -6,27 +6,27 @@
 /*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 17:31:17 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/29 01:47:01 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/05/03 18:51:03 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-#include <fcntl.h>
-#include <stdlib.h>
-#include "../minilibx_opengl_20191021/mlx.h"
+# include<fcntl.h>
+# include<stdlib.h>
+# include"../minilibx_opengl_20191021/mlx.h"
 
 typedef struct s_data
 {
 	char	**map;
-	int	width;
-	int	height;
-	int	i;
-	int	j;
-	int	count;
-	int	total;
-	int	donum;
+	int		width;
+	int		height;
+	int		i;
+	int		j;
+	int		count;
+	int		total;
+	int		donum;
 	void	*mlx;
 	void	*mlx_win;
 	void	*grass;
@@ -34,7 +34,7 @@ typedef struct s_data
 	void	*cock;
 	void	*wall;
 	void	*exit;
-} t_data;
+}t_data;
 
 void	file_name(int argc, const char **argv);
 void	error(int num);

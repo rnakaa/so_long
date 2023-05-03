@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 22:36:49 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/21 19:09:47 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/05/01 12:56:10 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-", 1);
 	}
 	if (n > 9)
-		ft_putnbr_fd(n /10, fd);
+		ft_putnbr_fd(n / 10, fd);
 	write(fd, &base[n % 10], 1);
 }
 
