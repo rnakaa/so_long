@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   find_cep.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rnaka <rnaka@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 17:35:45 by rnaka             #+#    #+#             */
-/*   Updated: 2023/03/26 20:38:18 by rnaka            ###   ########.fr       */
+/*   Updated: 2023/05/03 21:46:23 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,4 +99,5 @@ void	find_cep(char **map, int size)
 		free(list);
 		error_free(map, 8);
 	}
+	free(list);
 }
